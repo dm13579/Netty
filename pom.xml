@@ -12,6 +12,8 @@
         <module>netty-simple</module>
         <module>netty-chat</module>
         <module>netty-code</module>
+        <module>netty-splitpacket</module>
+        <module>netty-heartbeats</module>
     </modules>
 
     <dependencies>
