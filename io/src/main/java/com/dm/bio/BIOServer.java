@@ -16,7 +16,8 @@ public class BIOServer {
         ServerSocket serverSocket = new ServerSocket(9000);
         while (true) {
             System.out.println("等待连接。。");
-            Socket socket = serverSocket.accept(); //阻塞方法
+            //阻塞方法
+            Socket socket = serverSocket.accept();
             System.out.println("有客户端连接了。。");
             new Thread(new Runnable() {
                 @Override
@@ -45,6 +46,7 @@ public class BIOServer {
 
         }
         socket.getOutputStream().write("HelloClient".getBytes());
+        // 刷新输入输出流缓冲区
         socket.getOutputStream().flush();
     }
 }
