@@ -46,7 +46,7 @@ public class NettyByteBuf {
         System.out.println("byteBuf=" + byteBuf);
 
         //用Unpooled工具类创建ByteBuf
-        ByteBuf byteBuf2 = Unpooled.copiedBuffer("hello,zhuge!", CharsetUtil.UTF_8);
+        ByteBuf byteBuf2 = Unpooled.copiedBuffer("hello,dm!", CharsetUtil.UTF_8);
         //使用相关的方法
         if (byteBuf2.hasArray()) {
             byte[] content = byteBuf2.array();

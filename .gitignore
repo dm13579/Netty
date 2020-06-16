@@ -1,0 +1,13 @@
+/netty-simple/
+.idea/artifacts/
+.idea/inspectionProfiles/
+.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml
+.idea/vcs.xml
+.idea/workspace.xml
+io/io.iml
+netty-chat/netty-chat.iml
+netty-code/netty-code.iml
+netty-heartbeats/netty-heartbeats.iml
+netty-splitpacket/netty-splitpacket.iml
+netty-websocket/netty-websocket.iml
+websocket/websocket.iml
