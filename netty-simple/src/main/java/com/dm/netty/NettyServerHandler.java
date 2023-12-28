@@ -25,6 +25,11 @@ import io.netty.util.CharsetUtil;
  */
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("链接了");
+    }
+
     /**
      * 读取客户端发送的数据
      *

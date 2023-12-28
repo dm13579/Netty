@@ -10,22 +10,23 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.CharsetUtil;
 
 /**
-  *                  ,;,,;
-  *                ,;;'(    
-  *      __      ,;;' ' \   
-  *   /'  '\'~~'~' \ /'\.)  
-  * ,;(      )    /  |.     
-  *,;' \    /-.,,(   ) \    
-  *     ) /       ) / )|    
-  *     ||        ||  \)     
-  *    (_\       (_\
-  * @ClassName:NettyService 
-  * @Description:Netty服务端
-  * @author dm
-  * @date 2019/12/19
-  * @slogan: 我自横刀向天笑，笑完我就去睡觉
-  * @version V1.0
-  */
+ * ,;,,;
+ * ,;;'(
+ * __      ,;;' ' \
+ * /'  '\'~~'~' \ /'\.)
+ * ,;(      )    /  |.
+ * ,;' \    /-.,,(   ) \
+ * ) /       ) / )|
+ * ||        ||  \)
+ * (_\       (_\
+ *
+ * @author dm
+ * @version V1.0
+ * @ClassName:NettyService
+ * @Description:Netty服务端
+ * @date 2019/12/19
+ * @slogan: 我自横刀向天笑，笑完我就去睡觉
+ */
 public class NettyServer {
 
     public static void main(String[] args) throws Exception {
@@ -51,11 +52,11 @@ public class NettyServer {
                             ch.pipeline().addLast(new NettyServerHandler());
                         }
                     });
-                    System.out.println("netty server start。。");
-                    //绑定一个端口并且同步, 生成了一个ChannelFuture异步对象，通过isDone()等方法可以判断异步事件的执行情况
-                    //启动服务器(并绑定端口)，bind是异步操作，sync方法是等待异步操作执行完毕
-                    ChannelFuture cf = bootstrap.bind(9000).sync();
-                    //给cf注册监听器，监听我们关心的事件
+            System.out.println("netty server start。。");
+            //绑定一个端口并且同步, 生成了一个ChannelFuture异步对象，通过isDone()等方法可以判断异步事件的执行情况
+            //启动服务器(并绑定端口)，bind是异步操作，sync方法是等待异步操作执行完毕
+            ChannelFuture cf = bootstrap.bind(9000).sync();
+            //给cf注册监听器，监听我们关心的事件
             /*cf.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {

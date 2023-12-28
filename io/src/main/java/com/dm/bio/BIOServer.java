@@ -17,7 +17,7 @@ public class BIOServer {
         while (true) {
             System.out.println("等待连接。。");
             //阻塞方法
-            Socket socket = serverSocket.accept();
+            final Socket socket = serverSocket.accept();
             System.out.println("有客户端连接了。。");
             new Thread(new Runnable() {
                 @Override
